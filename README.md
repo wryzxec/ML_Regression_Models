@@ -13,7 +13,7 @@ $$ f_{w, b} = w*x + b $$
 
 ### The cost function $J$
 
-The cost function measures the ***error*** between the predicted values $\hat{y}$ and the actual values of $y$. The goal Linear Regression is to minimise the cost function.
+The cost function measures the ***error*** between the predicted values $\hat{y}$ and the actual values of $y$. The goal of Linear Regression is to minimise the cost function.
 
 $$ J_{w, b} = \frac{1}{2m} \sum_{i=1}^{m}(\hat{y} - y)^2  $$
 

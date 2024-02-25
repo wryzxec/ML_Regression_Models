@@ -56,3 +56,11 @@ This dataset contains the following data:
 
 Running `swedish_auto_insurance.py` gives us the following plots:
 
+![Ouput Plot Image](images/output_plot_1.png)
+
+***Left** - Cost/Error decreases with further iterations*
+
+***Middle** - Data plot with model-calculated line of best fit*
+
+***Right** - line of best fit changing with iterations*
+

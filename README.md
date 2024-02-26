@@ -13,7 +13,7 @@ $$ f_{w, b} = w*x + b $$
 
 ### The cost function $J$
 
-The cost function measures the ***error*** between the predicted values $\hat{y}$ and the actual values of $y$. The goal Linear Regression is to minimise the cost function.
+The cost function measures the ***error*** between the predicted values $\hat{y}$ and the actual values of $y$. The goal of Linear Regression is to minimise the cost function.
 
 $$ J_{w, b} = \frac{1}{2m} \sum_{i=1}^{m}(\hat{y} - y)^2  $$
 
@@ -55,4 +55,12 @@ This dataset contains the following data:
 - y = total payment for all the claims in thousands of Swedish Kronor
 
 Running `swedish_auto_insurance.py` gives us the following plots:
+
+![Ouput Plot Image](images/output_plot_1.png)
+
+***Left** - Cost/Error decreases with further iterations*
+
+***Middle** - Data plot with model-calculated line of best fit*
+
+***Right** - line of best fit changing with iterations*
 

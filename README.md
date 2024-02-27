@@ -48,7 +48,7 @@ $$
 
 After applying the Gradient Descent algorithm we now have new values for the parameters $w$ and $b$. We can now plot a line of best fit using these parameters and predict our own outputs for new inputs.
 
-## Swedish Auto Insurance Data Set
+### Swedish Auto Insurance Data Set
 
 This dataset contains the following data:
 - x = number of claims
@@ -63,4 +63,38 @@ Running `swedish_auto_insurance.py` gives us the following plots:
 ***Middle** - Data plot with model-calculated line of best fit*
 
 ***Right** - line of best fit changing with iterations*
+
+## Polynomial Regression
+
+Sometimes the relationship between $x$ and $y$ is non-linear. The Simple Linear Regression Model will fit the data poorly.
+
+Instead our function $f$ will be as follows:
+
+$$ f_{w,b}(\vec{x}) = w_1 * x + w_2 * x^2 +...+ w_n * x^n + b $$
+
+Which can written more simply as:
+
+$$ f_{\vec{w},b}(X) = \vec{w}\cdot X + b $$
+
+Where:
+
+- $\vec{w}$ is a vector containing weights $[w_1,...,w_n]$
+- $X$ is a Matrix defined as:
+
+
+$$
+X =
+\begin{bmatrix}
+x_1 & x_1^2 & \cdots & x_1^n \\
+x_2 & x_2^2 & \cdots & x_2^n \\
+\vdots & \vdots & \ddots \\ & \vdots \\
+x_m & x_m^2 & \cdots & x_m^n \\
+\end{bmatrix}\\,
+$$
+
+This time when applying gradient descent we must calculate the cost and gradient of each term ($w_n$) in the polynomial. However, the general formula stays the same.
+
+![Ouput Plot Image](images/polynomial_regression_plot.png)
+
+
 

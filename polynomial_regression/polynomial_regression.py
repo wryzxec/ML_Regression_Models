@@ -46,7 +46,6 @@ def gradient_descent(X, y, w_in, b_in, cost_function, gradient_function, alpha, 
         w = w - alpha*dj_dw
         b = b - alpha*dj_db
 
-
         J_history.append(cost_function(X, y, w, b))
         if i% math.ceil(num_iters / 10) == 0:
             print(f"w: {w} b: {b}")
@@ -55,11 +54,10 @@ def gradient_descent(X, y, w_in, b_in, cost_function, gradient_function, alpha, 
     return w, b, J_history, p_history
 
 def feature_scaling(X):
-    # Compute mean and standard deviation of each feature
+
     mean = np.mean(X, axis=0)
     std_dev = np.std(X, axis=0)
     
-    # Apply feature scaling
     X_scaled = (X - mean) / std_dev
     
     return X_scaled
@@ -67,7 +65,6 @@ def feature_scaling(X):
 
 if __name__ == "__main__":
 
-    # create target data
     data_file_path = Path(__file__).parent / 'data.csv'
     df = pd.read_csv(data_file_path)
 
@@ -78,7 +75,6 @@ if __name__ == "__main__":
 
     X = np.c_[x_train, x_train**2]
     
-    # Before calling gradient_descent, apply feature scaling to your input features
     X_scaled = feature_scaling(X)    
 
     w_in = np.zeros((X.shape[1],))

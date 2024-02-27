@@ -81,7 +81,7 @@ if __name__ == "__main__":
     # Before calling gradient_descent, apply feature scaling to your input features
     X_scaled = feature_scaling(X)    
 
-    w_in = np.zeros((X_scaled.shape[1],))
+    w_in = np.zeros((X.shape[1],))
     b_in = 0
     iterations = 10000
     tmp_alpha = 1e-3
